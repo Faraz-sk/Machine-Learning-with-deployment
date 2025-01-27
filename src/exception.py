@@ -1,5 +1,5 @@
 import sys
-import logging
+from src.logger import logging
 
 
 def error_message_detail(error,error_deatil:sys):
@@ -17,11 +17,6 @@ class CustomException(Exception):
   
   def __str__(self):
        return self.error_message
-     
-if __name__=="__main__":
-  try:
-    a=1/0
-  except Exception as e:
-    logging.info("DIVIDE BY ZERO")  
-    raise CustomException(e,sys)
-    
+
+
+
